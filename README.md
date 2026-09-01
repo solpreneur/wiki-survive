@@ -13,3 +13,18 @@ Wiki Survival is a terminal-based Python experience that tests a player's knowle
 - This logic (steps 6-7) continues until the player answers all the questions.
 - If the player answers all questions without losing all their lives. Then they won the game. Else if they lose all their lives before answering all questions then they lose.
 - Once the game is over we show the user the total points they got for the questions answered and how many lives they have left and an option to play again
+
+## Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/solpreneur/wiki-survive.git
+cd wiki-survive
+```
+
+### 2. Start the application
+
+```bash
+python3 main.py
+```
