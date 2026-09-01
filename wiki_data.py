@@ -15,4 +15,29 @@ def get_wikipedia_articles(
     an article is missing, ambiguous, or otherwise unusable.
     """
 
-    pass
+    # Temporary mock data for developers working on later parts of the game.
+    # Replace this list with live Wikipedia retrieval when that task is built.
+    articles = [
+        {
+            "title": "Mars",
+            "summary": "Mars is the fourth planet from the Sun.",
+        },
+        {
+            "title": "Jupiter",
+            "summary": "Jupiter is the largest planet in the Solar System.",
+        },
+        {
+            "title": "Saturn",
+            "summary": "Saturn is the sixth planet from the Sun.",
+        },
+        {
+            "title": "Venus",
+            "summary": "Venus is the second planet from the Sun.",
+        },
+        {
+            "title": "Mercury",
+            "summary": "Mercury is the closest planet to the Sun.",
+        },
+    ]
+
+    return articles
