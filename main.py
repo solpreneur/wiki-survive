@@ -11,7 +11,7 @@ from setup import (
 )
 from wiki_data import get_wikipedia_articles
 
- 
+
 def main() -> None:
     """Coordinate setup, content loading, gameplay, results, and replay."""
 
@@ -23,14 +23,14 @@ def main() -> None:
     display_game_instructions()
 
     while True:
-        topic = choose_topic()
+        topic, wiki_page = choose_topic()
         announce_round(topic)
 
         print(f"\nWelcome, {player_name}!")
         print(f"Your selected topic is: {topic}")
 
         # 4. Search seven candidates and return five usable article summaries.
-        articles = get_wikipedia_articles(topic)
+        articles = get_wikipedia_articles(wiki_page)
 
         # 5. Generate five questions with four choices and one correct answer.
         questions = generate_questions(articles)

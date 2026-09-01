@@ -26,5 +26,6 @@ cd wiki-survive
 ### 2. Start the application
 
 ```bash
+python -m pip install -r requirements.txt
 python3 main.py
 ```
