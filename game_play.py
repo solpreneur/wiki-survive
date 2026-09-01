@@ -1,23 +1,36 @@
+"""Gameplay, results, and replay skeleton for Wiki Survival."""
+
+from typing import Any
+
+
+STARTING_LIVES = 3
+POINTS_PER_CORRECT_ANSWER = 1
+
+
 def present_question(question: dict[str, Any]) -> int:
-    """Display one question and return the player's selected answer."""
+    """Display one question with four choices and return the selected answer."""
 
     pass
 
 
 def check_answer(question: dict[str, Any], selected_answer: int) -> bool:
-    """Return whether the player's selected answer is correct."""
+    """Check the selection against the question's single correct answer."""
 
     pass
 
 
 def play_game(player_name: str, questions: list[dict[str, Any]]) -> dict[str, Any]:
-    """Run up to five rounds while tracking score and three lives."""
+    """Run the question loop while tracking points and three lives.
+
+    Correct answers add one point. Wrong answers remove one life and reveal
+    the correct answer. The game ends after all questions or at zero lives.
+    """
 
     pass
 
 
 def display_results(player_name: str, result: dict[str, Any]) -> None:
-    """Display win/loss status, score, correct answers, and remaining lives."""
+    """Display win/loss status, total points, and remaining lives."""
 
     pass
 
