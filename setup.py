@@ -1,7 +1,10 @@
 """Player setup skeleton: welcome message, name, and topic choice."""
 
-
-TOPICS = ("Science", "History", "Geography", "Technology", "Sports")
+TOPICS = [
+    {"name": "Fish", "wiki_page": "List_of_fish_by_common_name"},
+    {"name": "English People", "wiki_page": "List_of_English_people"},
+    {"name": "Dinosaur", "wiki_page": "List_of_dinosaur_genera"},
+]
 
 
 def display_welcome() -> None:
@@ -22,8 +25,8 @@ def display_game_instructions() -> None:
     pass
 
 
-def choose_topic() -> str:
-    """Display the predefined topics and return the player's selection. return strings"""
+def choose_topic() -> (str, str):
+    """Display the predefined topics and return the player's selection. return topic string and wiki_page string"""
 
     pass
 
