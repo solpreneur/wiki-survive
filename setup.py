@@ -42,7 +42,13 @@ def display_game_instructions() -> None:
 def choose_topic() -> tuple[str, str]:
     """Display the topics and return the selected name and Wikipedia page."""
 
-    selected_topic = TOPICS[0]
+    print("Choose a topic:")
+    for index in range(len(TOPICS)):
+        # players see 1, 2, 3..., but the list is indexed 0, 1, 2...
+        print(f"  {index + 1}. {TOPICS[index]['name']}")
+
+    choice = int(input("Enter the number of your topic: "))
+    selected_topic = TOPICS[choice - 1]
     return selected_topic["name"], selected_topic["wiki_page"]
 
 
