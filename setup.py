@@ -25,10 +25,11 @@ def display_game_instructions() -> None:
     pass
 
 
-def choose_topic() -> (str, str):
-    """Display the predefined topics and return the player's selection. return topic string and wiki_page string"""
+def choose_topic() -> tuple[str, str]:
+    """Display the topics and return the selected name and Wikipedia page."""
 
-    pass
+    selected_topic = TOPICS[0]
+    return selected_topic["name"], selected_topic["wiki_page"]
 
 
 def announce_round(topic: str) -> None:
