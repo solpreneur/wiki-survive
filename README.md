@@ -22,8 +22,15 @@ Wiki Survival is a console-based Python quiz game where The player starts with 3
 git clone https://github.com/solpreneur/wiki-survive.git
 cd wiki-survive
 ```
+ 
+### 2. Create a .env file from the .env.example
 
-### 2. Start the application
+```bash
+cp .env.example .env
+```
+Then add your "OPENAI_API_KEY"
+
+### 3. Start the application
 
 ```bash
 python -m pip install -r requirements.txt
