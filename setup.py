@@ -4,6 +4,11 @@ TOPICS = [
     {"name": "Fish", "wiki_page": "List_of_fish_by_common_name"},
     {"name": "English People", "wiki_page": "List_of_English_people"},
     {"name": "Dinosaur", "wiki_page": "List_of_dinosaur_genera"},
+    {
+        "name": "European Geography",
+        "wiki_page": "List_of_cities_in_the_European_Union_by_population_within_city_limits",
+    },
+    {"name": "Bridges", "wiki_page": "Lists_of_bridges"},
 ]
 
 
