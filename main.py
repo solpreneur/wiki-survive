@@ -26,16 +26,15 @@ def main() -> None:
         topic, wiki_page = choose_topic()
         announce_round(topic)
 
-        print(f"\nWelcome, {player_name}!")
-        print(f"Your selected topic is: {topic}")
-
-        # 4. Search seven candidates and return five usable article summaries.
+        # Search seven candidates and return five usable article summaries.
+        print("\nLoading articles from Wikipedia...", flush=True)
         articles = get_wikipedia_articles(wiki_page)
 
-        # 5. Generate five questions with four choices and one correct answer.
+        # Generate five questions with four choices and one correct answer.
+        print("Generating questions. Please wait...", flush=True)
         questions = generate_questions(articles)
 
-        # 6-10. Run the game, show results, and offer replay.
+        # Run the game, show results, and offer replay.
         result = play_game(player_name, questions)
         display_results(player_name, result)
 

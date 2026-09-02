@@ -28,11 +28,16 @@ cd wiki-survive
 ```bash
 cp .env.example .env
 ```
-Then add your "OPENAI_API_KEY"
+Then add your "OPENAI_API_KEY". For example your .env should look like this
+
+```env
+OPENAI_API_KEY = "sk-proj-_ObDWdJJEmaLDhOm_HTqsdfsdfsdf"
+OPENAI_MODEL="gpt-5-nano"
+```
 
 ### 3. Start the application
 
 ```bash
 python -m pip install -r requirements.txt
-python3 main.py
+python main.py
 ```

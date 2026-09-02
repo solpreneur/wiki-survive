@@ -1,5 +1,7 @@
 """Player setup: welcome message, name, instructions, and topic choice."""
 
+import time
+
 
 TOPICS = [
     {"name": "Fish", "wiki_page": "List_of_fish_by_common_name"},
@@ -19,6 +21,7 @@ RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
 CYAN = "\033[36m"
+BANNER_DELAY = 0.08
 
 BANNER = r"""
    __        __  ___   _  __  ___
@@ -26,15 +29,18 @@ BANNER = r"""
     \ \ /\ / /   | |  | ' /   | |
      \ V  V /    | |  | . \   | |
       \_/\_/    |___| |_|\_\ |___|
-     S  U  R  V  I  V  A  L
+         S  U  R  V  I  V  E
 """
 
 
 def display_welcome() -> None:
     """Display the Wiki Survival welcome message."""
 
-    print(f"{BOLD}{CYAN}{BANNER}{RESET}")
-    print(f"{YELLOW}   Only the sharpest minds make it out alive...{RESET}")
+    for line in BANNER.strip("\n").splitlines():
+        print(f"{BOLD}{CYAN}{line}{RESET}", flush=True)
+        time.sleep(BANNER_DELAY)
+
+    print(f"{YELLOW}Only the sharpest minds make it out alive...{RESET}")
     print(f"{CYAN}{'=' * 44}{RESET}")
 
 
@@ -59,6 +65,7 @@ def display_game_instructions() -> None:
     print()
     print(f"{BOLD}{YELLOW}Let the survival begin!{RESET}")
     print(f"{CYAN}{'=' * 44}{RESET}")
+    input(f"\n{YELLOW}Press enter to continue.{RESET}")
 
 
 def choose_topic() -> tuple[str, str]:
