@@ -14,7 +14,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 #articles=[{'title': 'Protorosaurus belli', 'summary': 'Chasmosaurus ( KAZ-moh-SOR-əs) is a genus of ceratopsid dinosaur from the Late Cretaceous Period in North America'}, {'title': 'Kukufeldia', 'summary': 'Barilium is a genus of iguanodontian dinosaur which was first described as a species of Iguanodon (I'}, {'title': 'Choconsaurus', 'summary': 'Choconsaurus ("El Chocón lizard") is an extinct genus of herbivorous sauropod dinosaur belonging to the group Titanosauriformes, which lived in the area of present-day Argentina during the Early Cretaceous'}, {'title': 'Paranthodon', 'summary': 'Paranthodon ( pə-RAN-thə-don) is a genus of stegosaurian dinosaur that lived in what is now South Africa during the Early Cretaceous, between 139 and 131 million years ago'}, {'title': 'Melanorosaurus', 'summary': 'Melanorosaurus (meaning "Black Mountain Lizard", from the Greek melas/μέλας, "black", oros/ὄρος, "mountain" + sauros/σαῦρος, "lizard") is a genus of basal sauropodomorph dinosaur that lived during the Late Triassic period'}]
 
 
-def generate_questions(articles: list[Article]) -> list[dict]:
+def generate_questions(articles: list[wiki_data.Article]) -> list[dict]:
     """Generate one four-choice question for each of five articles.
 
     Every generated question should contain four possible answers and exactly

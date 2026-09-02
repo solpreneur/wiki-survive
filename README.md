@@ -15,6 +15,11 @@ Wiki Survival is a console-based Python quiz game where The player starts with 3
 10) Once the game is over we show the user the total points they got for the questions answered and how many lives they have left and an option to play the game again.
 
 ## Setup
+### Requirements
+- [Python](https://www.python.org/downloads/)
+- Internet connection
+- OpenAI API key
+- Audio output for sound effects (optional)
 
 ### 1. Clone the repository
 
@@ -22,10 +27,22 @@ Wiki Survival is a console-based Python quiz game where The player starts with 3
 git clone https://github.com/solpreneur/wiki-survive.git
 cd wiki-survive
 ```
+ 
+### 2. Create a .env file from the .env.example
 
-### 2. Start the application
+```bash
+cp .env.example .env
+```
+Then add your "OPENAI_API_KEY". For example your .env should look like this
+
+```env
+OPENAI_API_KEY = "sk-proj-_ObDWdJJEmaLDhOm_HTqsdfsdfsdf"
+OPENAI_MODEL="gpt-5-nano"
+```
+
+### 3. Start the application
 
 ```bash
 python -m pip install -r requirements.txt
-python3 main.py
+python main.py
 ```
