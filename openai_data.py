@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 
-def generate_questions(articles: list[Article]) -> list[dict]:
+def generate_questions(articles: list[wiki_data.Article]) -> list[dict]:
     """Generate one four-choice question for each of five articles.
 
     Every generated question should contain four possible answers and exactly
@@ -25,7 +25,7 @@ def generate_questions(articles: list[Article]) -> list[dict]:
         "Create exactly one question for each article. "
         "Use only the article title and summary. "
         "Do not invent facts. "
-        "Do not mention 'according to the summary' or 'according to the article'. "
+        "Do not mention 'according to the summary' or 'according to the article'. Ask questions as if the player has read the article. "
         "Each question must have exactly 4 answer choices. "
         "The correct_answer must be exactly one of the choices. Randomize the order of the answer choices. so the answer is not always the first choice. "
         "Return ONLY valid JSON. "
