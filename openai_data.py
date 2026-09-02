@@ -27,7 +27,7 @@ def generate_questions(articles: list[Article]) -> list[dict]:
         "Do not invent facts. "
         "Do not mention 'according to the summary' or 'according to the article'. "
         "Each question must have exactly 4 answer choices. "
-        "The correct_answer must be exactly one of the choices. "
+        "The correct_answer must be exactly one of the choices. Randomize the order of the answer choices. so the answer is not always the first choice. "
         "Return ONLY valid JSON. "
         "Do not use markdown. "
         "Do not wrap the JSON in ```json. "
